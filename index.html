@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>switchPage.js DEMO</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="container">
+        <div class="slide">
+            <div class="text">第一页</div>
+        </div>
+        <div class="slide">
+            <div class="text">第二页</div>
+        </div>
+        <div class="slide">
+            <div class="text">第三页</div>
+        </div>
+        <div class="slide">
+            <div class="text">第四页</div>
+        </div>
+        <div class="slide">
+            <div class="text">第五页</div>
+        </div>
+    </div>
+    <a href="#" id="next">↓</a>
+    <script src="zepto.min.js"></script>
+    <script type="text/javascript" src="SwitchPage.js"></script>
+    <script type="text/javascript">
+        $("#container").switchPage({
+            'direction': 'h',
+            // 'nav': true,
+            'loop': true,
+            'onPageSwitch': function() {
+                console.log($.fn.switchPage.getActiveIndex())
+            }
+        })
+        $('#next').click($.fn.switchPage.slideNext)
+    </script>
+</body>
+
+</html>

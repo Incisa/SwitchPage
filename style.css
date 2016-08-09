@@ -1,0 +1,120 @@
+/* swichPage.js style start */
+/* 分页插件所需样式 可自定义 不需要可不引入此部分样式 */
+
+.slide-nav-wrap {
+    position: fixed;
+    right: 6px;
+    top: 40%;
+    list-style: none;
+}
+
+.slide-nav-wrap .slide-nav {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #fff;
+    margin: 0 auto 10px;
+    cursor: pointer;
+}
+
+.slide-nav-wrap .slide-nav.active {
+    width: 10px;
+    height: 10px;
+    border: 2px solid #FFFE00;
+    background: none;
+}
+
+.slide-nav-wrap-h {
+    position: fixed;
+    bottom: 6px;
+    width: 100%;
+    left: 0;
+    list-style: none;
+    text-align: center;
+}
+
+.slide-nav-wrap-h .slide-nav {
+    display: inline-block;
+    vertical-align: middle;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #fff;
+    margin-right: 10px;
+}
+
+.slide-nav-wrap-h .slide-nav:last-child {
+    margin-right: 0;
+}
+
+.slide-nav-wrap-h .slide-nav.active {
+    width: 10px;
+    height: 10px;
+    border: 2px solid #FFFE00;
+    background: none;
+}
+
+/* swichPage.js style end */
+
+/* 页面样式 start */
+
+html, body {
+    height: 100%;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    text-align: center;
+    color: #fff;
+}
+
+.slide:nth-child(1) {
+    background-color: #00a1d6;
+}
+.slide:nth-child(2) {
+    background-color: #7e3d76;
+}
+.slide:nth-child(3) {
+    background-color: #1D1F21;
+}
+.slide:nth-child(4) {
+    background-color: #2a3e48;
+}
+.slide:nth-child(5) {
+    background-color: #c0392b;
+}
+
+#next {
+    position: fixed;
+    bottom: 5%;
+    right: 5%;
+    padding: 10px;
+    display: block;
+    border-radius: 50%;
+    background-color: #ccc;
+    color: #000;
+}
+
+.active .text {
+    padding: 30px;
+    animation-name: slideUp;
+    animation-duration: 1s;
+    animation-delay: .3s;
+    animation-fill-mode: both;
+    animation-iteration-count: 1;
+}
+
+@keyframes slideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(200px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+/* 页面样式 end */
